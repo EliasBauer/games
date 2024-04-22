@@ -36,13 +36,13 @@ def valid(board, num, pos):
     pos_y = pos[0]
 
     # Check row
-    for row in range(len(board[0])):
-        if board[pos_y][row] == num and pos_x != row:
+    for column in range(len(board[0])):
+        if board[pos_y][column] == num:
             return False
 
     # Check column
-    for column in range(len(board)):
-        if board[column][pos_x] == num and pos_y != column:
+    for row in range(len(board)):
+        if board[row][pos_x] == num:
             return False
 
     # Check box
